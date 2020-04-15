@@ -15,3 +15,10 @@ install.packages("tidyverse")
 library(tidyverse)
 household_power_consumption_Feb <- household_power_consumption %>% 
         filter(Date > '2007-01-31' & Date <'2007-02-03')
+
+par(mfrow=c(1,1),mar=c(5,4.5,4,2))
+hist(household_power_consumption_Feb$Global_active_power, 
+       col = 'red', 
+       main = 'Global Active Power', 
+       xlab = "Global Active Power (kilowatts)")
+
